@@ -1,11 +1,13 @@
+import Body from "./components/Body";
 import Welcome from "./components/Welcome";
 
 
 function App() {
   return (
     <div>
-      <h1>Store Manager</h1>
+      <Body/>
       <Welcome/>
+
     </div>
   );
 }

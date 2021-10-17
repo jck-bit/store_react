@@ -2,15 +2,14 @@ import classes from'./Welcome.module.css'
 
 const Welcome = () => {
     return (
-        <form>
+        <form className={classes.wrapper}>
            <div className={classes.control}>
-               <label>Enter Your email</label>
-               <input type ="text" placeholder='Email'/>
+              <input type ="text" placeholder='Email'/>
            </div> 
            <div className={classes.control}>
-               <label>Enter Your email</label>
-               <input type ="text" placeholder='Email'/>
+                <input type ="text" placeholder='password'/>
            </div> 
+           <button>Log in</button>
         </form>
     )
 }
