@@ -2,7 +2,6 @@ import { Route,Switch } from 'react-router-dom'
 import Body from "./pages/Body";
 import Home from './pages/Home';
 
-
 function App() {
   return (
     <div>
@@ -14,7 +13,9 @@ function App() {
        <Home/>
      </Route>
     </Switch>
+  
     </div> 
+    
   );
 }
 
