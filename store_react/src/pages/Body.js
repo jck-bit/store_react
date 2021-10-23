@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import classes from './Body.module.css'
+import Validation from './Validation';
 
 
 const Body = () => {
@@ -8,6 +9,9 @@ const Body = () => {
         email:"",
         password:""
     })
+
+    const [errors, setErrors] = useState({});
+
     const handleChange =(event) =>{
         setValues({
             ...values,
@@ -18,6 +22,7 @@ const Body = () => {
 
     const handleFormsubmit =(event) =>{
       event.preventDefault();
+      setErrors(Validation(values));
     }
     return(
     <div className={classes.alot}>
@@ -29,6 +34,7 @@ const Body = () => {
              value={values.username} 
              onChange={handleChange}
              />
+             {errors.username && <p className="error">{errors.username}</p>}
         </div>
         <div className={classes.control}>
             <input type="text"
@@ -36,6 +42,7 @@ const Body = () => {
              name="email" value={values.email}
               onChange={handleChange}
               />
+               {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div className={classes.control}>
             <input type="text" placeholder='password' 
@@ -43,6 +50,7 @@ const Body = () => {
             value ={values.password} 
             onChange={handleChange} 
             />
+             {errors.password && <p className="error">{errors.password}</p>}
         </div>
         <button onClick={handleFormsubmit}>Log in</button>
  
