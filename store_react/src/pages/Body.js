@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 import classes from './Body.module.css'
-import Validation from './Validation';
+import Validation from './Validation';  
 
 
 const Body = () => {
